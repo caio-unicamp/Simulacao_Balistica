@@ -21,9 +21,7 @@ Quando um projétil é disparado, ele segue uma trajetória determinada por:
 
 A força de arrasto que o ar exerce sobre o projétil é dada pela fórmula:
 
-\[
 $\vec{F}_d = -\frac{1}{2} C_d \rho A v \vec{v}$
-\]
 
 Onde:
 
