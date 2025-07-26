@@ -117,6 +117,6 @@ O projeto demonstra como traduzir um fenômeno físico real em um modelo computa
 
 ## 📚 Referências
 
-- Tabela balística: beckerblindagens.com.br
-- Física Básica – Ramalho, Nicolau & Toledo
-- Documentação: scipy.integrate.solve_ivp
+- [Documentação](scipy.integrate.solve_ivp)
+- [Tabela balística](beckerblindagens.com.br)
+- [Explicação resistência do ar](https://en.wikipedia.org/wiki/Drag_(physics))
