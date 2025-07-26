@@ -78,10 +78,10 @@ plt.plot(sol.t, sol.y[1], label="y(t): Altura")
 
 # Anotação das velocidades
 plt.axvline(sol.t[apex_index], color='red', linestyle='--')
-plt.text(sol.t[apex_index], sol.y[1][apex_index], f'{apex_velocity:.2f} m/s (ápice)', color='red')
+plt.text(sol.t[apex_index] + 0.1, sol.y[1][apex_index] + 10, f'{apex_velocity:.2f} m/s (ápice)', color='red')
 
 plt.axvline(impact_time, color='red', linestyle='--')
-plt.text(impact_time, 0, f'{impact_velocity:.2f} m/s (impacto)', color='red')
+plt.text(impact_time + 0.1, 2, f'{impact_velocity:.2f} m/s (impacto)', color='red')
 
 plt.xlabel("Tempo (s)")
 plt.ylabel("Posição (m)")
