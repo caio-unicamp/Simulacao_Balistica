@@ -22,15 +22,19 @@ Quando um projétil é disparado, ele segue uma trajetória determinada por:
 Para um projétil de área frontal `A` movendo-se com velocidade `v`, será varrido um volume 
 
 $$V = A \cdot v$$
+
 Fazendo com que o volume de ar deslocado por segundo seja:
 
 $$\Delta m = \rho \cdot V = \rho A v $$
+
 Desta forma, a **Força de Arrasto** sofrida pelo projétil (Considerando que uma bala em alta velocidade no ar representa um sistema newtoneano, ou seja, não viscoso):
 
 $$F_d \approx \Delta m \cdot v = (\rho A v) \cdot v = \rho A v^2$$
+
 Isto é:
 
 $$F_d \propto \rho A v^2$$
+
 Por fim, análisa-se de forma empírica que a proporcionalidade se torna igualdade adicionando um fator $\frac{1}{2} \cdot Cd$
 
 Como a força se trata de uma resistência em que sempre se opõe ao movimento, tem-se vetorialmente que:
