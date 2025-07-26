@@ -101,6 +101,7 @@ pip install numpy matplotlib scipy
 
 ## 🚀 Como Executar
 
+Você pode acessar o notebook [Simulação Balística](https://colab.research.google.com/drive/1vQ_H9E7liNvAfvRTMaz9e34GMD7CDkFT?usp=drive_link) e rodar virtualmente ou então seguir o passo a passo para rodar localmente:
 1. Salve o script com o código da simulação (por exemplo, `simulacao_balistica.py`)
 2. Execute com:
 
