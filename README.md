@@ -58,7 +58,7 @@ Separando em componentes (horizontal e vertical):
 - $$\ \frac{dv_x}{dt} = -\frac{1}{2m} C_d \rho A v v_x \$$
 - $$\ \frac{dv_y}{dt} = -g -\frac{1}{2m} C_d \rho A v v_y \$$
 
-Onde: $$\ v = \sqrt{v_x^2 + v_y^2} \$$
+Onde: $$`\ v = \sqrt{v_x^2 + v_y^2} \`$$
 
 
 ## 🧩 Método de Resolução (EDO)
