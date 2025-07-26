@@ -59,6 +59,7 @@ Separando em componentes (horizontal e vertical):
 - $$\ \frac{dv_y}{dt} = -g -\frac{1}{2m} C_d \rho A v v_y \$$
 
 Onde: 
+
 $$\ v = \sqrt{v_x^2 + v_y^2} \$$
 
 
@@ -107,3 +108,15 @@ pip install numpy matplotlib scipy
 python3 simulacao_balistica.py
 ```
 
+## 🧠 Conclusão
+
+O projeto demonstra como traduzir um fenômeno físico real em um modelo computacional detalhado, com o uso de métodos numéricos para simulação e análise. Ele é especialmente útil para:
+
+- Estudantes de Física ou Engenharia
+- Desenvolvedores interessados em simulação de sistemas físicos
+
+## 📚 Referências
+
+- Tabela balística: beckerblindagens.com.br
+- Física Básica – Ramalho, Nicolau & Toledo
+- Documentação: scipy.integrate.solve_ivp
