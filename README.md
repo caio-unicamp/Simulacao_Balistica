@@ -25,18 +25,17 @@ $\vec{F}_d = -\frac{1}{2} C_d \rho A v \vec{v}$
 
 Onde:
 
-- \( C_d \): coeficiente de arrasto (depende da forma do projétil; para uma 9mm FMJ usa-se 0.295)
-- \( \rho \): densidade do ar (1.225 kg/m³ ao nível do mar)
-- \( A \): área frontal do projétil (baseado no diâmetro)
-- \( v \): velocidade escalar do projétil
-- \( \vec{v} \): vetor velocidade
+- $\( C_d \)$: Coeficiente de arrasto (depende da forma do projétil; para uma 9mm FMJ usa-se 0.295)
+- $\( \rho \)$: Densidade do ar (1.225 kg/m³ ao nível do mar)
+- $\( A \)$: Área frontal do projétil (baseado no diâmetro)
+- $\( v \)$: Velocidade escalar do projétil
+- $\( \vec{v} \)$: Vetor velocidade
 
 Essa força depende do quadrado da velocidade e **atua sempre na direção oposta ao movimento**.
 
-
 ## 📌 Condições de Contorno
 
-- **Gravidade constante**: \( g = 9.81 \, \text{m/s}^2 \)
+- **Gravidade constante**: $\( g = 9.81 \, \text{m/s}^2 \)$
 - **Resistência do ar considerada**, com parâmetros reais
 - **Velocidade inicial**: 358 m/s (Valor estimado para munição 9mm FMJ)
 - **Ângulo de disparo**: 45°
@@ -48,18 +47,18 @@ Essa força depende do quadrado da velocidade e **atua sempre na direção opost
 
 As equações diferenciais que governam o movimento são obtidas a partir da 2ª Lei de Newton:
 
-\[
-m \cdot \vec{a} = \vec{F}_g + \vec{F}_d
-\]
+
+m $$\cdot \vec{a} = \vec{F}_g + \vec{F}_d$$
+
 
 Separando em componentes (horizontal e vertical):
 
-- \( \frac{dx}{dt} = v_x \)
-- \( \frac{dy}{dt} = v_y \)
-- \( \frac{dv_x}{dt} = -\frac{1}{2m} C_d \rho A v v_x \)
-- \( \frac{dv_y}{dt} = -g -\frac{1}{2m} C_d \rho A v v_y \)
+- $$\( \frac{dx}{dt} = v_x \)$$
+- $$\( \frac{dy}{dt} = v_y \)$$
+- $$\( \frac{dv_x}{dt} = -\frac{1}{2m} C_d \rho A v v_x \)$$
+- $$\( \frac{dv_y}{dt} = -g -\frac{1}{2m} C_d \rho A v v_y \)$$
 
-Onde \( v = \sqrt{v_x^2 + v_y^2} \)
+Onde $$\( v = \sqrt{v_x^2 + v_y^2} \)$$
 
 
 ## 🧩 Método de Resolução (EDO)
