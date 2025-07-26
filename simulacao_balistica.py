@@ -43,7 +43,6 @@ hit_ground.direction = -1  # só detectar quando estiver descendo
 
 # === Intervalo de simulação ===
 t_span = (0, 60)
-# t_eval = np.linspace(*t_span, 5000)
 
 # === Resolver o sistema de EDO ===
 sol = solve_ivp(
@@ -73,25 +72,44 @@ print(f"🔴 Velocidade no impacto com o solo: {impact_velocity:.2f} m/s")
 print(f"⏱ Tempo de voo até o impacto: {impact_time:.2f} s")
 
 # === Gráficos ===
-fig, ax = plt.subplots(2, 1, figsize=(10, 8))
+plt.figure(figsize=(10, 6))
+plt.plot(sol.t, sol.y[0], label="x(t): Posição horizontal")
+plt.plot(sol.t, sol.y[1], label="y(t): Altura")
 
-# Trajetória
-ax[0].plot(sol.y[0], sol.y[1])
-ax[0].set_title("Trajetória do Projétil com Resistência do Ar")
-ax[0].set_xlabel("Distância horizontal (m)")
-ax[0].set_ylabel("Altura (m)")
-ax[0].grid(True)
+# Anotação das velocidades
+plt.axvline(sol.t[apex_index], color='red', linestyle='--')
+plt.text(sol.t[apex_index], sol.y[1][apex_index], f'{apex_velocity:.2f} m/s (ápice)', color='red')
 
-# Velocidade
-speed = np.sqrt(sol.y[2]**2 + sol.y[3]**2)
-ax[1].plot(sol.t, speed, label="Velocidade")
-ax[1].axvline(sol.t[apex_index], color='orange', linestyle='--', label="Ponto mais alto")
-ax[1].axvline(impact_time, color='red', linestyle='--', label="Impacto")
-ax[1].set_title("Velocidade ao Longo do Tempo")
-ax[1].set_xlabel("Tempo (s)")
-ax[1].set_ylabel("Velocidade (m/s)")
-ax[1].legend()
-ax[1].grid(True)
+plt.axvline(impact_time, color='red', linestyle='--')
+plt.text(impact_time, 0, f'{impact_velocity:.2f} m/s (impacto)', color='red')
 
+plt.xlabel("Tempo (s)")
+plt.ylabel("Posição (m)")
+plt.title("Coordenadas do Projétil em função do Tempo")
+plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+# fig, ax = plt.subplots(2, 1, figsize=(10, 8))
+
+# # Trajetória
+# ax[0].plot(sol.y[0], sol.y[1])
+# ax[0].set_title("Trajetória do Projétil com Resistência do Ar")
+# ax[0].set_xlabel("Distância horizontal (m)")
+# ax[0].set_ylabel("Altura (m)")
+# ax[0].grid(True)
+
+# # Velocidade
+# speed = np.sqrt(sol.y[2]**2 + sol.y[3]**2)
+# ax[1].plot(sol.t, speed, label="Velocidade")
+# ax[1].axvline(sol.t[apex_index], color='orange', linestyle='--', label="Ponto mais alto")
+# ax[1].axvline(impact_time, color='red', linestyle='--', label="Impacto")
+# ax[1].set_title("Velocidade ao Longo do Tempo")
+# ax[1].set_xlabel("Tempo (s)")
+# ax[1].set_ylabel("Velocidade (m/s)")
+# ax[1].legend()
+# ax[1].grid(True)
+
+# plt.tight_layout()
+# plt.show()
