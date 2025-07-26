@@ -2,13 +2,11 @@
 
 Este projeto simula o movimento balístico de uma bala 9mm FMJ (Full Metal Jacket) levando em conta a resistência do ar. Ele fornece graficamente as coordenadas do projétil em função do tempo, além de calcular a velocidade no ponto mais alto da trajetória e no momento do impacto com o solo.
 
----
 
 ## 🎯 Objetivo
 
 Modelar de forma realista a trajetória de um projétil disparado por uma pistola, utilizando dados reais e técnicas numéricas para resolver o sistema de equações diferenciais que descreve seu movimento.
 
----
 
 ## ⚙️ Descrição Física do Problema
 
@@ -24,7 +22,7 @@ Quando um projétil é disparado, ele segue uma trajetória determinada por:
 A força de arrasto que o ar exerce sobre o projétil é dada pela fórmula:
 
 \[
-\vec{F}_d = -\frac{1}{2} C_d \rho A v \vec{v}
+$\vec{F}_d = -\frac{1}{2} C_d \rho A v \vec{v}$
 \]
 
 Onde:
@@ -37,7 +35,6 @@ Onde:
 
 Essa força depende do quadrado da velocidade e **atua sempre na direção oposta ao movimento**.
 
----
 
 ## 📌 Condições de Contorno
 
@@ -48,7 +45,6 @@ Essa força depende do quadrado da velocidade e **atua sempre na direção opost
 - **Massa do projétil**: 8 g (0.008 kg)
 - **Área frontal do projétil**: Calculada como área de um círculo, usando o diâmetro real de 9.02 mm
 
----
 
 ## 🧮 Equações do Movimento
 
@@ -67,7 +63,6 @@ Separando em componentes (horizontal e vertical):
 
 Onde \( v = \sqrt{v_x^2 + v_y^2} \)
 
----
 
 ## 🧩 Método de Resolução (EDO)
 
@@ -81,7 +76,6 @@ Foi utilizado o método `solve_ivp` da biblioteca SciPy para resolver numericame
 
 Foi definido um **evento** que detecta quando a altura do projétil volta a ser zero (y = 0), encerrando a simulação neste ponto.
 
----
 
 ## 📊 Saídas da Simulação
 
@@ -90,7 +84,6 @@ Foi definido um **evento** que detecta quando a altura do projétil volta a ser 
 3. **Velocidade no momento do impacto com o solo**
 4. **Tempo total de voo**
 
----
 
 ## 📦 Requisitos
 
@@ -106,11 +99,10 @@ Instale com:
 pip install numpy matplotlib scipy
 ```
 
----
 
 ## 🚀 Como Executar
 
-1. Salve o script com o código da simulação (por exemplo, )
+1. Salve o script com o código da simulação (por exemplo, `simulacao_balistica.py`)
 2. Execute com:
 
 ```bash
